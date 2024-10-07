@@ -24,7 +24,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "internet", "coding", "reading", "video/audio", "5", "6", "7", "8", "9" };
+static const char *tags[] = { "internet", "coding", "reading", "video/audio" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -32,11 +32,12 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
-	{ "Mail",     NULL,       NULL,       1,            0,           -1 },
-	{ "Firefox",  NULL,       NULL,       1,       0,           -1 },
-	{ "st-256color",  NULL,       NULL,       1 << 1,       0,           -1 },
-	{ "Zathura",  NULL,       NULL,       1 << 2,       0,           -1 },
-	{ "vlc",  NULL,       NULL,       1 << 3,       0,           -1 },
+	{ "thunderbird-default",	"Mail",       NULL,       1,            0,           -1 },
+	{ "firefox-esr",	"Navigator",       NULL,       1,       0,           -1 },
+	{ "st-256color",	"st-256color",       NULL,       1 << 1,       0,           -1 },
+	{ "Zathura",	"org.pwmt.zathura",       NULL,       1 << 2,       0,           -1 },
+	{ "vlc",  "vlc",       NULL,       1 << 3,       0,           -1 },
+	{ "FreeTube",  "freetube",       NULL,       1 << 3,       0,           -1 },
 };
 
 /* layout(s) */
